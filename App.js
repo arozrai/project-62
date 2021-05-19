@@ -39,6 +39,7 @@ export default class HomeScreen extends React.Component {
     }
   render(){
     return (
+        <View>
         <View style={styles.container}>
         <TextInput
             style={styles.inputBox}
@@ -62,22 +63,16 @@ export default class HomeScreen extends React.Component {
             }}
         />
         </View>
-    );
-  }
-  render(){
-      return(
-          <View style={styles.detailsContiner}>
-              <Text style={styles.detailsTitle}>
-                  Type:{" "}
-              </Text>
-              <Text style={{fontSize:18}}>
-                  {this.state.lexicalCategory}
-              </Text>
-          </View>
-      )
-  }
-    render(){
-        return(
+
+        <View style={styles.detailsContiner}>
+        <Text style={styles.detailsTitle}>
+            Type:{" "}
+        </Text>
+        <Text style={{fontSize:18}}>
+            {this.state.lexicalCategory}
+        </Text>
+        </View>
+  
             <View style={{flexDirection:'row',flexWrap:'wrap'}}>
                 <Text style={styles.detailsTitle}>
                     Definition:{" "}
@@ -86,6 +81,7 @@ export default class HomeScreen extends React.Component {
                     {this.state.definition}
                 </Text>
             </View>
+        </View>
         )
     }
 }
